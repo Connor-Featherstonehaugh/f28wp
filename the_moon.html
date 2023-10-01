@@ -9,8 +9,19 @@
 <p>para 1</p>
 <p2>para 2</p2>
 
-<button type="button">Click Me!</button>
+<button id="myButton" onclick="changeButton()">Click Me</button>
+function changeButton() {
+  var button = document.getElementById("myButton");
 
+  // Check the current text of the button
+  if (button.innerText === "Click Me") {
+    button.innerText = "Clicked!";
+    button.style.backgroundColor = "green";
+  } else {
+    button.innerText = "Click Me";
+    button.style.backgroundColor = "#007bff";
+  }
+}
 <table style= "background-color:blue">
     <tr>
     <th>Name</th>
