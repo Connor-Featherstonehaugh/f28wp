@@ -20,7 +20,7 @@ function changeButton() {
     dropdown.innerHTML = document.querySelector('select').innerHTML; // Copy options from the first dropdown
 
     // Create a button to remove the row
-    const removeButton = document.createElement("button");
+    cconst removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.onclick = function () {
         table.deleteRow(newRow.rowIndex);
