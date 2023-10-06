@@ -23,7 +23,7 @@ function changeButton() {
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.onclick = function () {
-        table.deleteRow(newRow.rowIndex);
+        table.deleteRow(newRow.rowIndex-1);
     };
 
     cell1.appendChild(dropdown);
