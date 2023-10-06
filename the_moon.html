@@ -12,19 +12,28 @@
 
 <button id="myButton" onclick="changeButton()">Click Me</button>
 
-<table style= "background-color:blue">
-    <tr>
-    <th>Name</th>
-    <th>Job Title</th>
-    <th>Email address</th>
-    </tr>
-    <tr>
-    <td>name A</td>
-    <td>Job Uno</td>
-    <td>email rgrgtext1</td>
-    </tr>
-  
-    </table>
+<table id="dropdownTable">
+  <thead>
+      <tr>
+          <th>Dropdown</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>
+              <select>
+                  <option value="option1">Option 1</option>
+                  <option value="option2">Option 2</option>
+                  <option value="option3">Option 3</option>
+              </select>
+          </td>
+          <td>
+              <button onclick="addRow()">Add Row</button>
+          </td>
+      </tr>
+  </tbody>
+</table>
 
     
 
