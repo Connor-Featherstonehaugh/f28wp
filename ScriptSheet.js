@@ -30,3 +30,21 @@ function changeButton() {
     cell1.appendChild(dropdown);
     cell2.appendChild(removeButton);
 }
+
+function updateTime() {
+  fetch("http://worldtimeapi.org/api/timezone/America/Argentina/Salta")
+      .then(response => response.json())
+      .then(data => {
+          const timeElement = document.getElementById("time");
+          timeElement.textContent = data.datetime;
+      })
+      .catch(error => {
+          console.error("Error fetching time data:", error);
+      });
+}
+
+// Initial call to update the time
+updateTime();
+
+// Set up an interval to refresh the time every 60 seconds (60000 milliseconds)
+setInterval(updateTime, 60000);
