@@ -35,8 +35,10 @@ function updateTime() {
   fetch("http://worldtimeapi.org/api/timezone/America/Argentina/Salta")
       .then(response => response.json())
       .then(data => {
-          const timeElement = document.getElementById("time");
+          const timeElement = document.getElementById("Actions");
           timeElement.textContent = data.datetime;
+
+          
       })
       .catch(error => {
           console.error("Error fetching time data:", error);
