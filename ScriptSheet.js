@@ -30,28 +30,3 @@ function changeButton() {
     cell1.appendChild(dropdown);
     cell2.appendChild(removeButton);
 }
-
-function fetchTimezoneTime(area) {
-  fetch(`http://worldtimeapi.org/api/timezone/${area}`)
-      .then(response => response.json())
-      .then(data => {
-          const currentTime = new Date(data.utc_datetime);
-          const formattedTime = currentTime.toLocaleTimeString();
-          document.getElementById("currentTime").textContent = `Current Time: ${formattedTime}`;
-      })
-      .catch(error => {
-          console.error("Error fetching data:", error);
-          document.getElementById("currentTime").textContent = "Error fetching data.";
-      });
-}
-
-function updateTime() {
-  const selectedArea = document.getElementById("timezone").value;
-  fetchTimezoneTime(selectedArea);
-}
-
-// Initially load the time based on the default selection
-updateTime();
-
-// Refresh the time every second
-setInterval(updateTime, 1000);
