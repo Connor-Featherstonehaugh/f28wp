@@ -32,13 +32,11 @@ function changeButton() {
 }
 
 function updateTime() {
-  fetch("http://worldtimeapi.org/api/timezone/America/Argentina/Salta")
+  fetch("get_time.php")
       .then(response => response.json())
       .then(data => {
-          const timeElement = document.getElementById("Actions");
+          const timeElement = document.getElementById("time");
           timeElement.textContent = data.datetime;
-
-          
       })
       .catch(error => {
           console.error("Error fetching time data:", error);
